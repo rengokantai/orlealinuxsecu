@@ -1,17 +1,77 @@
 #### orlealinuxsecu
+#####utilities
+######netstat
+```
+netstat --listening |less
+netstat -n --listening |less  //show numberic. ex 25=smtp
+```
+######kill
+```
+killall -9 firefox
+```
+######nmap
+```
+nmap -sS -v 172.30.42.44
+nmap -sS -v 172.30.42.44
+
+```
+#####kernel
+######Linux Kernel
+```
+less /var/log/kern.log. tab
+```
+```
+apt-cache search image |less
+```
+######kernel modules
+```
+ls /boot/
+ls /lib/modules/3.16=generic/kernel/fs/nfs
+insmod /lib/...../fs/hfs/hfs.ko
+rmmod
+```
+######Managing Kernel Para
+```
+cd /proc/sys/net
+ls
+```
+Ex: If we set
+```
+sysctl -w net.ipv4.ip_forward=1
+```
+then
+```
+cat /proc/sys/net/ipvt/ip_forward //get 1
+```
+
+######Kernel Builds
+```
+uname -a
+```
+build source:
+```
+ls /usr/src
+```
+#######Kernel config
+```
+ls /usr/src/linux-source/linux-source/
+make menuconfig
+```
+######Viewing Kernel Config From Running
+copy file from boot to /usr/src/...
 #####Firewalls
 ######iptables
 ```
- sysctl -w net.ipv4.ip_forward=1
- ```
- to change this permanently
- ```
- vim /etc/sysctl.conf
- ```
- vim
- ```
- vim fw.rules
- ```
+sysctl -w net.ipv4.ip_forward=1
+```
+to change this permanently
+```
+vim /etc/sysctl.conf
+```
+vim
+```
+vim fw.rules
+```
 
 edit
 ```
