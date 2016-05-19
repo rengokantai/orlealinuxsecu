@@ -13,8 +13,16 @@ killall -9 firefox
 ```
 nmap -sS -v 172.30.42.44
 nmap -sS -v 172.30.42.44
-
+nmap -sS -p 80,443 172.12.1.1
+nmap -sS -p0-65535 172.12.1.1  (same as -p- )
+-O (operating system)
 ```
+######tcpdump
+```
+tcpdump -vv -i eth0
+```
+######lspci lsusb
+lspci: all device connect to pci bus
 #####kernel
 ######Linux Kernel
 ```
